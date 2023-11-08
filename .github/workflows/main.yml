@@ -1,0 +1,12 @@
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0/10 * * * *'
+
+jobs:
+  job-caller-typo:
+    uses: Anthmsplayground/public-workflows/.github/workflows/reusable-for-secrets.yml@main
+    secrets: inherit
+  job-caller-clean:
+    uses: AnthmsPlayground/public-workflows/.github/workflows/reusable-basic.yml@main
+    secrets: inherit
